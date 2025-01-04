@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineScope</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Chakra+Petch:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Swiper -->
+    <script src="https://kit.fontawesome.com/a092ea6680.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script type="module" src="./script/main.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="headerLogo">
+            <img src="/images/SClogo.png" alt="">
+            <h1>C I N E S C O P E</h1>
+        </div>
+        <div class="homeDiv">
+            <a href="/">HOME</a>
+        </div>
+        <div class="searchIcon">
+            <i class="fa-solid fa-magnifying-glass headerSearchIcon" id="searchIcon"></i>
+        </div>
+
+        <div class="searchDiv" id="searchDiv">
+            <div class="formDiv">
+                <h2>Search for Movies</h2>
+                <form id="movie-search-form">
+                    <input type="text" id="movie-search-input" placeholder="Enter movie title" required>
+                    <button type="submit">Search Movies</button>
+                </form>
+            </div>
+            <div class="formDiv">
+                <form id="person-search-form">
+                    <h2>Search for People</h2>
+                    <input type="text" id="person-search-input" placeholder="Enter person's name" required>
+                    <button type="submit">Search People</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div id="results-container" class="results-container"></div>
+
+
+
+    <div class="top10LogoContainer">
+        <div class="top10LogoWrapper">
+            <img src="/images/top10.png" alt="" class="top10Logo">
+        </div>
+        <div class="logoLettersWrapper">
+            <img src="/images/ratedMovies.png" alt="" class="logoLetters">
+        </div>
+    </div>
+
+    <div class="swiper-container swiperContainer-1">
+        <div class="swiper-button-next swiperNext-1"></div>
+        <div class="swiper-button-prev swiperPrev-1"></div>
+        <div class="swiper-pagination swiperPage-1"></div>
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" id="topPopularSlide-0">
+                <div>
+                    <img id="topPopularImg-0" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-0"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-0"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-0">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-0"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-1">
+                <div>
+                    <img id="topPopularImg-1" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-1"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-1"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-1">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-1"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-2">
+                <div>
+                    <img id="topPopularImg-2" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-2"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-2"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-2">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-2"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-3">
+                <div>
+                    <img id="topPopularImg-3" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-3"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-3"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-3">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-3"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-4">
+                <div>
+                    <img id="topPopularImg-4" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-4"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-4"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-4">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-4"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-5">
+                <div>
+                    <img id="topPopularImg-5" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-5"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-5"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-5">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-5"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-6">
+                <div>
+                    <img id="topPopularImg-6" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-6"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-6"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-6">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-6"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-7">
+                <div>
+                    <img id="topPopularImg-7" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-7"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-7"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-7">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-7"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-8">
+                <div>
+                    <img id="topPopularImg-8" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-8"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-8"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-8">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-8"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topPopularSlide-9">
+                <div>
+                    <img id="topPopularImg-9" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topPopularTitle-9"></h3>
+                    <h4 class="movieGenre" id="topPopularGenre-9"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topPopularSummary-9">
+                        </p>
+                        <h3 class="movieYear" id="topPopularYear-9"></h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="top10LogoContainer">
+        <div class="top10LogoWrapper">
+            <img src="/images/top10.png" alt="" class="top10Logo">
+        </div>
+        <div class="logoLettersWrapper">
+            <img src="/images/popularMovies.png" alt="" class="logoLetters">
+        </div>
+    </div>
+    <!-- slide for top-rated Movies -->
+    <div class="swiper-container swiperContainer-2">
+        <div class="swiper-button-next  swiperNext-2"></div>
+        <div class="swiper-button-prev  swiperPrev-2"></div>
+        <div class="swiper-pagination  swiperPage-2"></div>
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" id="topRatedSlide-0">
+                <div>
+                    <img id="topRatedImg-0" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-0"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-0"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-0">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-0"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-1">
+                <div>
+                    <img id="topRatedImg-1" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-1"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-1"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-1">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-1"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-2">
+                <div>
+                    <img id="topRatedImg-2" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-2"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-2"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-2">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-2"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-3">
+                <div>
+                    <img id="topRatedImg-3" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-3"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-3"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-3">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-3"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-4">
+                <div>
+                    <img id="topRatedImg-4" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-4"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-4"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-4">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-4"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-5">
+                <div>
+                    <img id="topRatedImg-5" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-5"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-5"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-5">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-5"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-6">
+                <div>
+                    <img id="topRatedImg-6" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-6"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-6"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-6">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-6"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-7">
+                <div>
+                    <img id="topRatedImg-7" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-7"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-7"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-7">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-7"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-8">
+                <div>
+                    <img id="topRatedImg-8" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-8"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-8"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-8">
+                        </p>
+                        <h3 class="movieYear" id="topRatedYear-8"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="topRatedSlide-9">
+                <div>
+                    <img id="topRatedImg-9" src="" alt="poster" class="swiperImg">
+                </div>
+                <div>
+                    <h3 class="movieTitle" id="topRatedTitle-9"></h3>
+                    <h4 class="movieGenre" id="topRatedGenre-9"></h4>
+
+                    <div>
+                        <p class="sinopsis" id="topRatedSummary-9">
+                        </p>
+                        <p class="movieYear" id="topRatedYear-9"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="/images/SClogo.png" alt="">
+        <h2>C I N E S C O P E</h2>
+    </footer>
+</body>
+
+</html>
