@@ -28,7 +28,7 @@ document
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Optional: makes the scroll smooth
+      behavior: "smooth",
     });
 
     const search = document.getElementById("movie-search-input").value;
@@ -47,7 +47,7 @@ document
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Optional: makes the scroll smooth
+      behavior: "smooth",
     });
 
     const search = document.getElementById("person-search-input").value;
@@ -74,7 +74,11 @@ document.getElementById("searchIcon").addEventListener("click", () => {
   });
 });
 
-/* Make the search-forms dissapear when out of focus for a dynamic function*/
+/* Make the search-forms dissapear when out of focus for a dynamic function, 
+this function however has a small issue when the browser gives any type of 
+"input suggestions" upon clicking on any of the two input forms, if the mouse 
+is moved anywhere inside the "suggestion bar" - the bowser inpertrepts that as leaving 
+thus triggering below function and evenlistener unitentionally */
 function handleHeaderMouseLeave() {
   document.querySelector(".headerLogo").classList.add("show");
   document.querySelector(".headerLogo").classList.remove("hide");
@@ -87,7 +91,8 @@ function handleHeaderMouseLeave() {
 const header = document.getElementById("header");
 header.addEventListener("mouseleave", handleHeaderMouseLeave);
 
-// Remove adn readd the mouseleave event listener when the search-inputs gains focus
+/* To combat the issue mentioned in previous comment
+ I have added following evenlisteners to both forms */
 document.getElementById("movie-search-input").addEventListener("focus", () => {
   header.removeEventListener("mouseleave", handleHeaderMouseLeave);
 });
